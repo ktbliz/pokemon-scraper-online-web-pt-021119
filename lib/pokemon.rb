@@ -23,7 +23,7 @@ class Pokemon
     #binding.pry
   end
   
-  def alter_hp(new_hp)
+  def alter_hp(new_hp, db)
     self.hp = new_hp
   end 
   
