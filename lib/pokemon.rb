@@ -2,7 +2,7 @@
 
 class Pokemon
   
-  attr_accessor :id, :name, :type, :db
+  attr_accessor :id, :name, :type, :db, :hp
   
   @@all = []
   
@@ -24,7 +24,7 @@ class Pokemon
   end
   
   def alter_hp(new_hp)
-    
+    self.hp = new_hp
   end 
   
 end
