@@ -2,16 +2,15 @@
 
 class Pokemon
   
-  attr_accessor :id, :name, :type, :db, :hp 
+  attr_accessor :id, :name, :type, :db
   
   @@all = []
   
-  def initialize(id:, name:, type:, db:, hp: 60) 
+  def initialize(id:, name:, type:, db:) 
     @id = id 
     @name = name 
     @type = type 
     @db = db 
-    @hp = hp
   end  
   
   def self.save(name, type, db) 
@@ -22,6 +21,10 @@ class Pokemon
     array = db.execute("SELECT * FROM pokemon WHERE id = ?", id)
     new_pokemon = self.new(id: array[0][0], name: array[0][1], type: array[0][2], db: db)
     #binding.pry
+  end
+  
+  def alter_hp(new_hp)
+    
   end 
   
 end
